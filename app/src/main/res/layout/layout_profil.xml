@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity"
+                android:background="#ffffff">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/id_toolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@android:color/darker_gray">
+
+        <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_revert"
+                android:layout_gravity="top|start"
+        />
+
+    </android.support.v7.widget.Toolbar>
+    <ImageView
+            android:id="@+id/id_profil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/user2"
+            android:layout_marginTop="190dp"/>
+    <TextView
+            android:id="@+id/et_nama_profil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/id_profil"
+            android:text="Nama Profil"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"/>
+    <TextView
+            android:id="@+id/et_alamat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_nama_profil"
+            android:text="Alamat"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"/>
+    <TextView
+            android:id="@+id/et_kontak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_alamat"
+            android:text="kontak profile"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"/>
+
+    <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/et_kontak"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="75dp"
+            android:text="LOGOUT"
+            android:background="#48535F"
+            android:textColor="@android:color/white"
+            />
+
+
+</RelativeLayout>

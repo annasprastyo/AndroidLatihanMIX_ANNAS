@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/id_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            >
+
+        <RelativeLayout
+                android:id="@+id/id_user"
+                android:layout_width="350dp"
+                android:layout_height="wrap_content">
+        <ImageView
+                android:id="@+id/imguser"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/user2"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+        />
+        <TextView
+                android:id="@+id/et_nama_header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="20sp"
+                android:layout_marginStart="15dp"
+                android:layout_toRightOf="@+id/imguser"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/id_toolbar4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/id_toolbar"
+            android:background="@android:color/black">
+
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+            android:id="@+id/rootFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/id_toolbar3"
+            android:layout_below="@id/id_toolbar4">
+
+    </FrameLayout>
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/id_toolbar3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_above="@id/bottomView"
+            android:background="@android:color/black">
+
+    </android.support.v7.widget.Toolbar>
+    <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottomView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_navigation"
+            android:background="@android:color/white"
+            android:layout_alignParentBottom="true">
+
+    </android.support.design.widget.BottomNavigationView>
+
+</RelativeLayout>
