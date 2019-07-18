@@ -23,12 +23,14 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var mGoogleSignIn : GoogleSignInClient
     //untuk firebase authentication
     private lateinit var fAuth : FirebaseAuth
+    private lateinit var helperPref : PrefsHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.layout_login)
 
         fAuth = FirebaseAuth.getInstance()
+        helperPref = PrefsHelper(this)
         val gso= GoogleSignInOptions.Builder(
             GoogleSignInOptions.DEFAULT_SIGN_IN
         ).requestIdToken(getString(R.string.default_web_client_id))
@@ -91,6 +93,7 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this,
                 "Login Berhasil Welcome ${user.displayName}",
                 Toast.LENGTH_SHORT).show()
+            helperPref.saveID(user.uid) //berfungsi untuk save uid ke sharedpreferences
             startActivity(Intent(this,MainActivity::class.java))
             finish()
         }

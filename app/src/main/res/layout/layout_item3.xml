@@ -1,79 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                xmlns:tools="http://schemas.android.com/tools"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                tools:context=".MainActivity"
-                android:gravity="center"
-                android:background="#ffffff">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center">
 
-    <RelativeLayout
-            android:id="@+id/id_toolbar1"
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:background="@drawable/selector_lengkung">
-
-        <ImageView
-                android:id="@+id/id_upload"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginTop="15dp"
-                android:layout_centerHorizontal="true"
-                android:src="@drawable/upload"/>
-        <TextView
-                android:id="@+id/et_upload"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Pilih Gambar"
-                android:layout_below="@id/id_upload"
-                android:textAlignment="center"
-                android:textSize="20dp"
-                android:textStyle="bold"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-            android:id="@+id/id_toolbar2"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:background="#E3E3E3"
-            android:layout_below="@id/id_toolbar1">
-
-
-        <EditText
-                android:inputType="textMultiLine"
-                android:lines="8"
-                android:minLines="6"
-                android:background="@android:color/white"
-                android:gravity="top|left"
-                android:maxLines="10"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent"
-                android:scrollbars="vertical"
-                android:hint="Tambah Keterangan"
-                android:layout_margin="10dp"
-        />
-    </RelativeLayout>
-
-
-    <Button
-            android:id="@+id/btn_upload"
-            android:layout_width="125dp"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="50dp"
-            android:text="UPLOAD"
-            android:layout_below="@id/id_toolbar2"
-            android:background="#48535F"
-            android:textColor="@android:color/white"
-    />
+            android:text="Item 3"
+            android:textSize="40sp"
+            android:gravity="center"/>
 
-
-</RelativeLayout>
+</LinearLayout>

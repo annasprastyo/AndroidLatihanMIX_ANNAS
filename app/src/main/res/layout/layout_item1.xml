@@ -3,8 +3,9 @@
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 tools:context=".MainActivity"
+                android:id="@+id/ll_content"
                 android:background="#ffffff">
 
     <android.support.v7.widget.Toolbar
@@ -39,9 +40,9 @@
     </android.support.v7.widget.Toolbar>
 
     <ImageView
-            android:id="@+id/id_img_content"
+            android:id="@+id/image_upload"
             android:layout_width="match_parent"
-            android:layout_height="255dp"
+            android:layout_height="250dp"
             android:layout_below="@id/id_toolbar1"
             android:src="@drawable/violet2"/>
 
@@ -50,12 +51,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
-            android:layout_below="@+id/id_img_content">
+            android:layout_below="@+id/image_upload">
         <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
             <TextView
-                    android:id="@+id/et_content"
+                    android:id="@+id/et_description"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="I like writing letters in the library"
@@ -67,18 +68,9 @@
                     android:layout_height="wrap_content"
                     android:text="Komentar"
                     android:layout_marginStart="5dp"
-                    android:layout_below="@id/et_content"
+                    android:layout_below="@id/et_description"
                     android:textColor="@android:color/black"
             />
         </RelativeLayout>
     </android.support.v7.widget.Toolbar>
-    <android.support.v7.widget.Toolbar
-            android:id="@+id/id_toolbar3"
-            android:layout_width="match_parent"
-            android:layout_height="360dp"
-            android:layout_below="@+id/id_toolbar2"
-            android:background="@android:color/darker_gray">
-
-    </android.support.v7.widget.Toolbar>
-
 </RelativeLayout>
