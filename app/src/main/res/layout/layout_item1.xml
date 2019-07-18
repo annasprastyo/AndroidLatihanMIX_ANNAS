@@ -4,7 +4,7 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:context=".MainActivity"
+                tools:context=".activity.MainActivity"
                 android:id="@+id/ll_content"
                 android:background="#ffffff">
 
@@ -42,7 +42,8 @@
     <ImageView
             android:id="@+id/image_upload"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
             android:layout_below="@id/id_toolbar1"
             android:src="@drawable/violet2"/>
 

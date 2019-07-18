@@ -36,14 +36,8 @@ class UploadAdapter : RecyclerView.Adapter<UploadAdapter.UploadViewHolder> {
         val uploadModel : UploadModel = itemUpload.get(p1)
         p0.et_nama.text = uploadModel.getUploadBy()
         p0.et_description.text = uploadModel.getDescUpload()
-//        Toast.makeText(mContext, p0.et_nama.text,
-//            Toast.LENGTH_SHORT).show()
-//        Glide.with(mContext)
-        Toast.makeText(mContext, uploadModel.getImageName(),
-            Toast.LENGTH_SHORT).show()
         Glide.with(mContext)
             .load(uploadModel.getFileUrl())
-            .centerCrop()
             .error(R.drawable.ic_launcher_background)
             .into(p0.image_upload)
         p0.ll_content.setOnClickListener {

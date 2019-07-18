@@ -1,9 +1,11 @@
-package com.example.androidmix_annas
+package com.example.androidmix_annas.activity
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.support.v7.app.AppCompatActivity
+import com.example.androidmix_annas.R
+import com.google.firebase.auth.FirebaseAuth
 
 /**
  * A sample splash screen created by devdeeds.com
@@ -11,6 +13,7 @@ import android.support.v7.app.AppCompatActivity
  */
 class SplashActivity : AppCompatActivity() {
     private var mDelayHandler: Handler? = null
+    private lateinit var fAuth : FirebaseAuth
     private val SPLASH_DELAY: Long = 3000 //3 seconds
 
     internal val mRunnable: Runnable = Runnable {
@@ -26,6 +29,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         //Initialize the Handler
+        fAuth = FirebaseAuth.getInstance()
         mDelayHandler = Handler()
 
         //Navigate with delay
@@ -40,6 +44,13 @@ class SplashActivity : AppCompatActivity() {
         }
 
         super.onDestroy()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (fAuth.currentUser != null) {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
     }
 
 }

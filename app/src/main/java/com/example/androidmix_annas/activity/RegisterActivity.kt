@@ -1,9 +1,9 @@
-package com.example.androidmix_annas
+package com.example.androidmix_annas.activity
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
+import com.example.androidmix_annas.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.layout_register.*
 
